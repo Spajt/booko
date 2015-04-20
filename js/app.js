@@ -1,5 +1,5 @@
 /**
- * Oskar Sajdak, oskar.sajdak@gmail.com, 1429546419 (04/20/2015 @ 4:13pm (UTC))
+ * Oskar Sajdak, oskar.sajdak@gmail.com, 1429557806 (04/20/2015 @ 7:23pm (UTC))
  */
 
 /**
@@ -20,24 +20,59 @@
 /**
  * Sample code execution - do not change code below 
  */
-(function(){
+var Layer = function (id) {
+
+    this.showLoader = function () {
+        workLayer = document.querySelectorAll(id);
+        console.log(workLayer[0].id);
+        mask = "div";
+        image = {
+            tag: "img",
+            src: "img/spinner.gif"
+        }
+        element = document.createElement(mask);
+        element.style.width = "100%";
+        element.style.height = "100%";
+        element.style.position = "absolute";
+        element.style.top = 0;
+        element.style.zIndex = "999";
+        imageElement = document.createElement(image.tag);
+        imageElement.src = image.src;
+        workLayer[0].appendChild(imageElement);
+        workLayer[0].appendChild(element);
+        imageElement.style.position = "absolute";
+        imageElement.style.top = "calc(50% - " + imageElement.offsetHeight / 2 + "px";
+        imageElement.style.left = "calc(50% - " + imageElement.offsetWidth / 2 + "px";
+
+    }
+    this.hideLoader = function () {
+        workLayer = document.querySelectorAll(id);
+        mask = document.querySelectorAll(id + " > div");
+        image = document.querySelectorAll(id + " > img");
+        console.log(image);
+        workLayer[0].removeChild(image[0]);
+        workLayer[0].removeChild(mask[0]);
+    }
+    console.log(id);
+};
+(function () {
     var l1, l2, l3;
 
     l1 = new Layer("#layer1");
     l1.showLoader();
 
-    setTimeout(function(){
+    setTimeout(function () {
         l2 = new Layer("#layer2");
         l2.showLoader();
     }, 2000);
 
-    setTimeout(function(){
+    setTimeout(function () {
         l1.hideLoader();
         l3 = new Layer("#layer3");
         l3.showLoader();
     }, 4000);
 
-    setTimeout(function(){
+    setTimeout(function () {
         l2.hideLoader();
         l3.hideLoader();
     }, 6000);
