@@ -15,4 +15,4 @@
             tools.alert(t("Cykl został zaktualizowany."), location.reload);
             return;
         }
-=== source file end ===
+=== source file end = =a= 
