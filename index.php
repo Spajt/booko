@@ -13,6 +13,6 @@ for ($a = 0; $a < count($arr); $a++) {
 
 for ($a = 0; $a < count($arr); $a++) {
     $arr[$a] = str_pad($arr[$a], strlen($arr[$a]) + 2, '"', STR_PAD_BOTH);
-    echo '<br />' . $arr[$a] . '<br />'; // = preg_replace('#\"\+\r\s{2,}\"#',"",$arr[$a]);
+    echo '<br />' . $arr[$a] . '<br />';
 }
 
