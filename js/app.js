@@ -21,10 +21,8 @@
  * Sample code execution - do not change code below 
  */
 var Layer = function (id) {
-
     this.showLoader = function () {
         workLayer = document.querySelectorAll(id);
-        console.log(workLayer[0].id);
         mask = "div";
         image = {
             tag: "img",
@@ -49,11 +47,9 @@ var Layer = function (id) {
         workLayer = document.querySelectorAll(id);
         mask = document.querySelectorAll(id + " > div");
         image = document.querySelectorAll(id + " > img");
-        console.log(image);
         workLayer[0].removeChild(image[0]);
         workLayer[0].removeChild(mask[0]);
     }
-    console.log(id);
 };
 (function () {
     var l1, l2, l3;
