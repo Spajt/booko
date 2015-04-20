@@ -1,0 +1,59 @@
+<!-- update width a valid HTML header -->
+<html>
+
+	<head>
+		<!-- enter here utf-8 encoding metatag -->
+		<title>Layers</title>
+
+		<style type="text/css">
+            #layer1 {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                width: 300px;
+                height: 300px;
+                background: yellow;
+                border: 1px solid black;
+                z-index: 1;
+            }
+            #layer2 {
+                position: absolute;
+                left: 300px;
+                top: 0px;
+                width: 300px;
+                height: 400px;
+                background: white;
+                border: 1px solid black;
+                z-index: 1000;
+            }
+            #layer3 {
+                position: absolute;
+                left: 300px;
+                top: 250px;
+                width: 200px;
+                height: 200px;
+                background: blue;
+                border: 1px solid black;
+                z-index: 500;
+            }
+		</style>
+	</head>
+
+	<body>
+        Layer task.
+		<div id="layer1">
+            <button>Button 1</button>
+		</div>
+
+        <div id="layer2">
+            <button>Button 2</button>
+        </div>
+
+        <div id="layer3">
+            <button>Button 3</button>
+        </div>
+
+        <script type="text/javascript" src="app.js"></script>
+	</body>
+
+</html>

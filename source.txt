@@ -1,18 +1,18 @@
 === source file begin ===
-        var message = "Cykl nie zosta³ zaktualizowany";
+        var message = "Cykl nie zostaÅ‚ zaktualizowany";
         if (data.events.negative_after_positive)
         {
-            message = t("Odnotowa³aœ ujemny test ci¹¿owy po wczeœniejszym pozytywnym wyniku. "+
-                               "Czy oznacza to, ¿e chcesz zaznaczyæ poronienie i rozpocz¹æ nowy cykl?");
+            message = t("OdnotowaÅ‚aÅ› ujemny test ciÄ…Å¼owy po wczeÅ›niejszym pozytywnym wyniku. "+
+                               "Czy oznacza to, Å¼e chcesz zaznaczyÄ‡ poronienie i rozpoczÄ…Ä‡ nowy cykl?");
         }
         else if (data.events.menstruation_after_positive)
         {
-            message = t("Odnotowa³aœ wyst¹pienie krwawienia po wczeœniejszym pozytywnym teœcie ci¹¿owym. "+
-                               "Czy oznacza to, ¿e chcesz zaznaczyæ poronienie i rozpocz¹æ nowy cykl?");
+            message = t("OdnotowaÅ‚aÅ› wystÄ…pienie krwawienia po wczeÅ›niejszym pozytywnym teÅ›cie ciÄ…Å¼owym. "+
+                               "Czy oznacza to, Å¼e chcesz zaznaczyÄ‡ poronienie i rozpoczÄ…Ä‡ nowy cykl?");
         }
         else
         {
-            tools.alert(t("Cykl zosta³ zaktualizowany."), location.reload);
+            tools.alert(t("Cykl zostaÅ‚ zaktualizowany."), location.reload);
             return;
         }
 === source file end ===
